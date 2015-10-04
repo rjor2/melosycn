@@ -1,0 +1,27 @@
+
+db:
+  image: mysql
+  volumes:
+    - ../db/mysql:/var/lib/mysql  # path to database volume (ie. data)
+  environment:
+    - MYSQL_ROOT_PASSWORD=pass
+    - MYSQL_DATABASE=melosity
+    - MYSQL_USER=django
+    - MYSQL_PASSWORD=pass
+  container_name: melosity-mysql
+
+web:
+  build: .
+  volumes:
+    - .:/code
+  ports:
+    - "80:80"
+    - "433:433"
+  links:
+    - db
+  container_name: melosity-web
+  environment:
+    - MYSQL_ROOT_PASSWORD=pass
+    - MYSQL_DATABASE=melosity
+    - MYSQL_USER=django
+    - MYSQL_PASSWORD=pass

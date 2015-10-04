@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'sync/css/style.css' %}" />
+</head>
+
+<body>
+    <section id="buttons">
+        <button id="play">Play</button>
+        <button id="stop">Stop</button>
+        <button id="rec">Rec</button>
+
+        Lag : <input id="lag" type="text">
+
+        Number of frames Selected : <input id="frames" type="text">
+    </section>
+
+    <section id="main">
+        <canvas id="main" width="1600" height="400">
+            Sorry, your browser doesn't support the &lt;canvas&gt; element.
+        </canvas>
+    </section>
+    <br>
+    <section id="track1">
+        <canvas id="canvas" width="1600" height="200">
+            Sorry, your browser doesn't support the &lt;canvas&gt; element.
+        </canvas>
+    </section>
+    <br>
+    <section id="track2">
+        <canvas id="canvas" width="1600" height="200">
+            Sorry, your browser doesn't support the &lt;canvas&gt; element.
+        </canvas>
+    </section>
+
+    <script src="{% static 'sync/js/sync.js' %}"></script>
+
+</body>
+
+</html>
