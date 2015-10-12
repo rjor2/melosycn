@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Real Time Audio</title>
+
+    <!-- Load jQuery and JavaScript -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'realtimeaudio/css/style.css' %}" />
+
+</head>
+
+
+<body style="background-color: #212121">
+
+    <p style="color: #BBBBBB"> Speak into your microphone and hopefully you will hear the audio in realtime. May even be a nice graph :P </p>
+
+    <div id="amplitude"></div>
+    <div id="time"></div>
+    <div id="frequency" style="background-color: #212121;height: 100%;width: 100%;"></div>
+
+    <!-- Never know where to put this -->
+    <script src="{% static 'realtimeaudio/js/realtimeaudio.js' %}"></script>
+
+</body>
+
+
+</html>

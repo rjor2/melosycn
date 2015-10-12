@@ -24,8 +24,8 @@ SECRET_KEY = 'r$p_nrz#d-abi@m6jq+)g7goer0nemmfs9m9sv8e-n7h^-k9c+' # I know
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
-ALLOWED_HOSTS = []
+# This is only for runserver right??
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sync',
+    'realtimeaudio',
 )
 
 MIDDLEWARE_CLASSES = (

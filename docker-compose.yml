@@ -12,11 +12,12 @@ db:
 
 web:
   build: .
-  volumes:
-    - .:/code
+  # volumes:
+  #  - .:/code
   ports:
     - "80:80"
     - "433:433"
+    - "8000:8000"
   links:
     - db
   container_name: melosity-web
