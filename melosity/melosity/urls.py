@@ -19,5 +19,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^sync/', include('sync.urls')),
     url(r'^realtimeaudio/', include('realtimeaudio.urls')),
+    url(r'^videocallrtc/', include('videocallrtc.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ]

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Call WebRTC</title>
+
+    <!-- Icecomm Script all magic here -->
+    <script type="text/javascript" src="http://cdn.icecomm.io/icecomm.js"></script>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'videocallrtc/css/style.css' %}" />
+</head>
+
+
+<body>
+
+    <video id="localVideo" autoplay></video>
+
+    <!-- Never know where to put this -->
+    <script src="{% static 'videocallrtc/js/videocallrtc.js' %}"></script>
+</body>
+
+
+</html>
